@@ -20,7 +20,7 @@ The project focuses on:
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [How the Project Works](#How-the-Project-Works)
+- [How the Project Works](#how-the-project-works)
 - [Algorithm Details](#algorithm-details)
 - [Customization](#customization)
 - [Project Structure](#project-structure)
@@ -47,7 +47,7 @@ matplotlib
 ## Usage
 To run the project, simply execute the Python script:
 ```bash
-python anomaly_detection.py
+python anomalyDetection.py
 ```
 ### Data Stream
 The script simulates a data stream with regular patterns (a sine wave), random noise, and occasional anomalies. The anomaly detector processes this stream in real time, identifying and flagging anomalies based on statistical deviations.
@@ -59,18 +59,18 @@ Anomalies are detected using the Z-Score method, which flags data points that ar
 The script generates a live plot of the data stream, with detected anomalies highlighted in red. This allows you to visualize both the stream and the identified anomalies in real time.
 
 
-# How-the-Project-Works
+## How-the-Project-Works
 
-## Data Stream Simulation
-The `stream_data` function in `data_stream.py` generates a continuous flow of data points that include regular patterns, noise, and seasonal variations.
+### Data Stream Simulation
+The `stream_data` function in `dataStream.py` generates a continuous flow of data points that include regular patterns, noise, and seasonal variations.
 
-## Anomaly Detection
-The `AnomalyDetector` class in `anomaly_detection.py` uses a rolling window to calculate the mean and standard deviation of the recent data. It flags any value that deviates significantly from the normal distribution (based on a z-score).
+### Anomaly Detection
+The `AnomalyDetector` class in `anomalyDetection.py` uses a rolling window to calculate the mean and standard deviation of the recent data. It flags any value that deviates significantly from the normal distribution (based on a z-score).
 
-## Real-time Visualization
+### Real-time Visualization
 The `RealTimePlotter` in `visualization.py` continuously updates the plot as the data streams in and highlights detected anomalies in red.
 
-## Testing the Project
+### Testing the Project
 To test the project, simply run `main.py`, and a real-time plot of the data stream and anomalies will be displayed.
 
 This structure provides a complete, efficient anomaly detection project with real-time capabilities. Let me know if you'd like to make further adjustments!
@@ -105,12 +105,15 @@ detector = AnomalyDetector(window_size=100, threshold=2.5)
 
 ## Project Structure
 ```
-.
-├── anomaly_detection.py   # Main Python script
-├── README.md              # Project documentation (this file)
-├── requirements.txt       # Dependencies
-└── LICENSE                # License file (optional)
+data-stream-anomaly-detection/
+│
+├── anomalyDetection.py        # Main script for anomaly detection logic
+├── dataStream.py              # Script to simulate the data stream
+├── visualization.py            # Script for real-time visualization of data and anomalies
+├── requirements.txt            # Lists all the external libraries required to run the project
+├── README.md                   # Project documentation
+├── .gitignore                  # Specifies files and directories to ignore in Git
 ```
 
-- **anomaly_detection.py**: The main script containing the data stream simulation, anomaly detection, and real-time visualization.
+- **anomalyDetection.py**: The main script containing the data stream simulation, anomaly detection, and real-time visualization.
 - **requirements.txt**: Lists all the external libraries required to run the project.
