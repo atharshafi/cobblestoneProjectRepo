@@ -83,7 +83,7 @@ The anomaly detection is based on the Z-Score method. Here’s how it works:
 
 ### Example of the Z-Score formula:
 \[
-Z = \frac{x - \mu}{\sigma}
+Z=x−μ/σ
 \]
 Where:
 - \( x \) is the new data point,
